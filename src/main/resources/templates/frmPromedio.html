@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="layout::head">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<nav th:insert="layout::menu"></nav>
+	<table class="table table-dark table-striped">
+		<thead align="center">
+			<tr>
+				<th scope="col">NOTA 1</th>
+				<th scope="col">NOTA 2</th>
+				<th scope="col">NOTA 3</th>
+				<th scope="col">NOTA FINAL</th>
+			</tr>
+		</thead>
+		<tbody align="center">
+			<tr th:each="promedio :${listaPromedio}">
+				<td th:text="${promedio.nota1}"></td>
+				<td th:text="${promedio.nota2}"></td>
+				<td th:text="${promedio.nota3}"></td>
+				<td th:text="${promedio.notaFinal}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
